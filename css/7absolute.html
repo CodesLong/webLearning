@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            position: absolute;
+            width: 199px;
+            height: 200px;
+            background-color: hotpink;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box1 {
+            margin: 100px;
+        }
+        .box2 {
+        position: absolute ;
+        top: 100px;
+        left: 0;
+        background-color: red;
+        }
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            position: relative;
+        }
+        .box3>p{
+            width: 100px;
+            height: 180px;
+            background-color: greenyellow;
+            position: absolute;
+            /* top: 50%; */
+            /* margin-top: 11px; */
+            left: 50%;
+            margin-left: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box3">
+        <p>文本内容</p>
+    </div>
+    <span>块内容</span>
+</body>
+</html>
