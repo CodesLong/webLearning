@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /*
+          固定定位的元素与父级没关系
+          固定定位的参看点 当前可视浏览器窗口
+        */
+        body {
+            height: 3000px;
+        }
+        .box {
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+        .box>p {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            position: fixed;
+        }
+        .goback {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: blueviolet;
+            /* 水平居中 */
+            text-align: center;
+            /* 垂直居中 */
+            line-height: 100px;
+            font-size: 30px;
+        }
+        a:link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>文本内容</p>
+    </div>
+    <span class="goback"> <a href="#"> 👆 </a></span>
+</body>
+</html>
