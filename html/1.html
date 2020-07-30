@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        }
+         */
+        
+        div {
+            background-color: skyblue;
+        }
+        
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>你好中国</h1>
+    <hr>
+    <p>正文部分</p>
+    <div>
+        <h1>这是头部</h1>
+    </div>
+    <h3>label标签</h3>
+    <h4>
+        关联控件的id一般指的是input元素的id；<br> 在html5中还新增了一个属性form，form属性是用来规定所属的一个或多个表单的 id 列表，以空格隔开；<br> 当label标签不在表单标签form中时就需要使用form属性来指定所属表单；
+    </h4>
+    <form action="" id="form1"><input type="checkbox" id="basketball"><label for="basketball">篮球</label><input type="checkbox" id="football"><label for="football">足球</label><input type="checkbox" id="tableTennis"><label for="tableTennis">乒乓球</label><br><input type="submit" value="提交"
+        /></form><label for="football" form="form1">足球</label><br> 用户名：
+    <input type="text" name="username"> 密码： <input type="passsword">
+    <form action="">
+        <label for="">用户名：<input type="text" name="username"></label>
+        <label for="pwd">密码：</label><input type="password" name="pwd" id="pwd">
+    </form>
+    <h3>form表单的练习</h3>
+    <form action="">
+        <p>输入框：input标签有type，name，value提示作用<input type="text" name="uname" value="value提示作用"></p>
+        <p>密码：type="password"<input type="password"></p>
+        <p>性别：type="radio" checked="checked"默认的先择，name一样选择互斥 <input type="radio" name="1" id="" checked="checked">男<input type="radio" name="1" id="">女</p>
+        <p>
+            爱好： type="checkbox"改变样式，可以取消选择<br>
+            <input type="checkbox" name="">运动
+            <input type="checkbox" checked>编程
+            <input type="checkbox" name="">旅游
+            <input type="checkbox" name="">交友
+            <p>select标签内multiple 显示多个，size个数 ，option标签为显示内容 ，selected为默认选择</p>
+            <select multiple size="1" name="" id="">
+				<option value="">------选择项--------</option>
+				<option value="" selected>英语</option>
+				<option value="">心理学</option>
+				<option value="">财务管理</option>
+			</select>
+
+        </p>
+        <p>
+            头像：选择文件 type="file" 来实现
+            <input type="file" name="">
+        </p>
+        <p>
+            个人留言:textarea标签实现<br>
+            <textarea name="us" id="tarea" cols="30" rows="8">个人留言框</textarea>
+        </p>
+        <p>
+            提交按钮；type="button/reset/submit/image" 也可以用图标来提交<br>
+            <input type="button" value="普通按钮" id="btn">
+            <input type="reset" />
+            <input type="submit" value="注册" />
+            <input type="submit " value="注册 " />
+        </p>
+    </form>
+    <h3>alink标签的使用</h3>
+    <p>
+        <a name="th ">这个a标签中用name起一个名字可以起到锚点的作用</a>
+        <a href="#th ">#+name名称跳到指定锚点位置，没有name就跳到开始位置</a>
+        <a href="../1hello-world.html#test ">使用锚点跳到指定的文件->文件名#+name</a>
+    </p>
+    <div>
+        这是尾部
+        <span>11</span><br>
+        <span>22</span> 这是随 便 <s>航线和del和s</s><u>下划线u和ins</u> 写的 <em>斜体字em和i</em> 一些 <b>哈哈</b> 话用来 <strong>强调</strong> 来练习强调功能的使用
+        <pre>
+			pre可以保持其中的    格式
+			          不变
+		</pre>
+    </div>
+
+    <script>
+        var tarea = document.getElementById('tarea');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            console.log(tarea.value);
+
+        }
+        console.log("js代码要放在目标执行后，因为html是从上向下加载的 ");
+    </script>
+</body>
+
+</html>

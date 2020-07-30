@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            text-decoration: none;
+            background-color: deeppink;
+            height: 40px;
+            width: 120px;
+            display: inline-block;
+            color: floralwhite;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        a:hover {
+            color: chartreuse;
+            background-color: cornflowerblue;
+        }
+        /* ------------------------------------------ */
+        
+        body {
+            background-image: url(0.jpeg);
+            background-repeat: no-repeat;
+            height: 3000px;
+            background-attachment: fixed;
+        }
+        
+        .box1 {
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            background-image: url(p.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .box2 {
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            background: #ccc url(p.jpg) no-repeat center;
+        }
+        
+        p {
+            width: 300px;
+            height: 400px;
+            background: blue;
+        }
+        /* ---------------------------------------------- */
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            border: 4px solid red;
+            border-bottom-style: dashed;
+            border-width: 20px;
+        }
+        
+        input {
+            border: none;
+            border-bottom: 4px solid greenyellow;
+        }
+        
+        table,
+        td {
+            border: 5px solid rgb(3, 255, 209);
+            border-collapse: collapse;
+        }
+        /* ----------------------------------------------------- */
+        
+        .b {
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            border: 10px solid greenyellow;
+            padding: 10px 1px 10px 20px;
+        }
+        /* -------------------------------------------------------- */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bob1 {
+            background-color: greenyellow;
+            text-align: center;
+            margin: 100px auto 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>111</span>
+    <div class="bob"></div>
+    <div class="bob1">
+        文本
+        <input type="text">
+
+    </div>
+    <div class="bob2">1111111111</div>
+    <!-- ------------------------------------------ -->
+    <div class="b">
+        文本内容
+    </div>
+    <p class="pn">要对自己有信心</p>
+    <div class="b1">
+        <p class="p1">
+            IT经营
+        </p>
+    </div>
+    <!-- ------------------------------------------ -->
+    <div class="box"></div>
+    <input type="text">
+    <table>
+        <tr>
+            <td>aaa</td>
+            <td>bb</td>
+            <td>ccc</td>
+        </tr>
+    </table>
+    <!-- ------------------------------------------ -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <p>1111111</p>
+    <!-- <img src="0.jpeg" alt=""><br> -->
+    <!-- ------------------------------------------ -->
+    <a class="nav" href="#">首页</a>
+    <a class="nav " href="#">产品</a>
+    <a class="nav" href="#">新闻</a>
+    <div class="nav">
+        <a href="#">首页</a>
+        <a href="#">产品</a>
+        <a href="#">新闻</a>
+
+    </div>
+</body>
+
+</html>

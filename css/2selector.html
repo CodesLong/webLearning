@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: skyblue;
+        }
+        
+        #div1 {
+            text-decoration: underline;
+            font-size: 40px;
+            color: red;
+        }
+        
+        .name {
+            /* size /family /style / weight 加粗
+            综合性写法
+           font: 样式 粗细  字号/行高 字体
+           其中 字号和字体是必须的
+             */
+            font-size: 40px;
+        }
+        
+        span {
+            font-size: 40px;
+        }
+        
+        #first {
+            color: red;
+        }
+        
+        #second {
+            color: blue;
+        }
+        
+        #th {
+            color: green;
+        }
+        /* ------------------------------------------------- */
+        
+        div>p {
+            font-size: 20px;
+            color: chartreuse;
+        }
+        
+        ul li p.test {
+            /* 交集选择器 */
+            color: chartreuse;
+        }
+        
+        p,
+        span {
+            /* 并集选择器 */
+            color: cyan;
+            background-color: darkgreen;
+        }
+        /* -------------------------------------------- */
+        /* 伪类选择器   为访问前 */
+        
+        a:link {
+            /* 取消下划线 */
+            text-decoration: none;
+            color: darkorchid;
+        }
+        
+        a:visited {
+            /* 访问后的状态 */
+            color: floralwhite;
+        }
+        
+        a:hover {
+            /* 鼠标放上的状态 */
+            color: fuchsia;
+        }
+        
+        a:active {
+            /* 按下鼠标不放的状态 */
+            color: black;
+        }
+        /* -------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <!-- -------------------------------------------- -->
+    <a href="http://www.qq123.com">腾讯</a>
+    <a href="http://www.w3school.com.cn">w3c</a>
+
+    <!-- -------------------------------------------- -->
+    <div>
+        <ul>
+            <li>
+                <p class="test">交集选择器的使用</p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>我是div内的元素</p>
+    </div>
+    <div id="div1">我爱中国</div>
+    <p>我爱人们</p>
+    <p>我爱我家</p>
+    <p class="name">只要功夫深，铁棒磨成针</p>
+    <p>岁月蹉跎，请珍惜</p>
+    <span id="first">V</span>
+    <span id="second">u</span>
+    <span id="th">e</span>
+</body>
+
+</html>
