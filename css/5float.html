@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         /*
+          浮动的元素不能撑开父亲
+          浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响
+          清除浮动方法 
+          1 隔墙法-给浮动的元素增加一个高度 缺点 儿子的高度有时候
+          不确定 所以高度设置固定 不灵活
+          2 额外标签法 
+          clear:left; clear:right; 
+            clear:both
+            在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot
+            缺点 会影响页面的结构
+          3 给浮动元素的父亲增加overflow: hidden 
+          overflow:hidden overflow:auto overflow:scroll 
+
+          4 使用after伪元素清除浮动
+             .clearfix:after {
+               content: '';
+               display: block;
+               height: 0;
+               visibility: hidden;
+               clear: both;
+            }  
+          5 双伪元素清除浮动  
+
+        */
+        /* .box1 {
+            height: 260px;
+        } */
+        /* 给浮动元素的父亲增加overflow: hidden 
+        .box1 {
+            overflow: hidden;
+        } */
         .box1>div {
             width: 200px;
             height: 200px;
