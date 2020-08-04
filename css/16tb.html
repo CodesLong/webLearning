@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+          
+        }
+        .taobao{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .arrow_l {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .arrow_r {
+            right: -20px;
+            text-align: right;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .arrow_l,
+        .arrow_r {
+            position:absolute;
+            top: 50%;
+            margin-top: -35px;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-decoration: none;
+            font-size: 30px;
+            background-color: black;
+            display: none;
+            color: white;
+        }
+        .taobao:hover .arrow_l,
+        .taobao:hover .arrow_r{
+            display: block;
+        }
+        .taobao .circle {
+            position: absolute;
+            left: 50%;
+            width: 90px;
+            height: 15px;
+            background: greenyellow;
+            border-radius: 10px;
+            margin-left: -40px;
+            bottom: 30px;
+        }
+        .taobao .circle li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            margin: 3px;
+        }
+        .taobao .circle li.current {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="taobao">
+        <img src="../img/tb.jpg" alt="">
+        <a href="#" class="arrow_l">
+            &lt;
+        </a>
+        <a href="#" class="arrow_r">
+            &gt;
+        </a>
+        <ul class="circle">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

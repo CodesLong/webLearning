@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+        .two {
+            vertical-align: middle;
+        }
+        .three {
+             /*
+        vertical-align对行内元素或行内块元素有效
+        */
+            vertical-align: top;
+        }
+        img {
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div> <img src="../img/0.jpeg" width="180" alt=""> 哆啦A梦</div>
+    <div > <img class="two" src="./p.jpg" width="180" alt=""> 哆啦A梦</div>
+    <div > <img class="three" src="./p.jpg" width="180" alt=""> 哆啦A梦</div>
+</body>
+</html>
