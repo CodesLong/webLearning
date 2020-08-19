@@ -55,7 +55,24 @@
     // function fn(p) {
     //     alert(p + 'haha')
     // }
-    var arr = [10, 70, 23, 70, 43, 54, 10, 38, 43, 70];
+    var arr = [10, 50, 23, 70, 43, 54, 10, 38, 43, 70];
+    var arr1 = [10, 50, 23, 70];
+    // ------------------------------------
+    // arr.sort(function(a,b){
+    //     return b-a;//降序 a-b则为升序
+    // });
+    // console.log(arr);
+    // -------------------------------------
+    // var res = arr.reverse();
+    // // 逆序
+    // console.log(res);
+    // ------------------------------
+    // var str = arr.join('|:|');
+    // console.log(str);
+    // -----------------------------------
+    // var res = arr.concat(arr1)
+    // console.log(res);
+    // ----------------------------------
     // var idx = arr.indexOf(43);
     // alert(idx)
     // function noRepeat(s){
@@ -71,9 +88,41 @@
     // }
     // var a = noRepeat(arr);
     // console.log(a);
-    arr.forEach(function(item,index,array){
-        console.log(item +":" +index);
-    });
+    // ==================
+    // arr.forEach(function(item,index,array){
+    //     console.log(item +":" +index);
+    // });
+    // --------------------------------
+    // var bool = arr.some(function(v,i,arr) {
+    //     console.log(v);
+    //     return v > 60;
+    // });
+    // console.log(bool);
+    // --------------------
+    // var newarr = arr.filter(function(v,i,arr){
+    //     return v % 2 === 0;
+    // });
+    // console.log(newarr);
+    // -----------------------------------
+    // var flag = arr.every(function(v,i,arr){
+    //     console.log(v);
+    //     return v > 19;
+    // });
+    // console.log(flag);
+    // ---------------------------
+    // var newarr = arr.map(function(v,i,arr){
+    //     return v + 1;
+    // });
+    // console.log(newarr);
+    // --------------------------------------
+    // var sum = arr.reduce(function(start,v,i,arr){
+    //     console.log(start);
+    //     console.log(v);
+    //     console.log(i);
+    //     console.log(arr);
+    //     return start + v;
+    // },0);
+    // console.log(sum);
     </script>
 </body>
 </html>
