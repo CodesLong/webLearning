@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var zs = {
+            name:'zs',
+            age:'12',
+            sex:'男',
+            study:function(){
+                console.log('working hard');
+            },
+            play:function(){
+                console.log('eating ji playing');
+            }
+        };
+        // console.log(zs.age);
+        // console.log(zs['age']);
+        // console.log(zs.sex);
+        // zs.study();
+        // zs.play();
+        // var key = 'name';
+        // console.log(zs[key]);
+        // ----------------------------
+        // var obj = new Object();
+        // obj.age =  33;
+        // obj.sex = '女';
+        // obj.name = 'lucy';
+        // console.log(obj);
+        // -------------------------
+        // for(var k in zs){   //遍历对象的属性和方法
+        //     var v = zs[k];
+        //     if(v instanceof Function){
+        //         v();
+        //     } else{
+        //         console.log(v);
+        //     }
+        // }
+        // -------------------------------------
+        // var arr = [1,2,3];
+        // for(var k in arr){
+        //     console.log(arr[k]);
+        // }
+        // console.log(arr instanceof Array);
+        // console.log(zs instanceof Array);
+        // -------------------
+        // var str = 'hello';
+        // var strRes = str.concat(' word ','!!!');
+        // console.log(strRes);
+        // -----------------------------------------
+        // substr/slice/substring
+        var url = "http://www.baidu.com?username=admin&psw=123456";
+        var index = url.indexOf('?');
+        var params = url.substr(index+1);
+        console.log(params);
+        console.log(index);
+        // --------------------------------------------
+        // var content = 'tmd你好，tmd中国，中国tmd人民万岁';
+        // var index  = content.indexOf('tmd');
+        // console.log(content);
+        // while(index != -1){
+        //     content = content.replace('tmd','');
+        //     index = content.indexOf('tmd');
+        // }
+        // console.log(content);
+        // ------------------------------------------------------
+        var arr = params.split('&');
+        console.log(arr);
+        var username = arr[0].split('=')[1];
+        var pwd = arr[1].split('=')[1];
+        console.log(username,pwd);
+        var str = '1,2,3,4';
+        console.log(str);
+        var reverstr = str.split(',').reverse().join();
+        console.log(reverstr);
+        console.log(String.fromCharCode(66));
+    </script>
+</body>
+</html>
