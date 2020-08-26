@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="../img/song.mp3"  controls autoplay loop></audio>
+    <audio controls >
+        <source src="../img/song.mp3" type="audio/mpeg">
+            浏览器不会支持
+    </audio>
+    <!-- src 指定视频的url
+    controls 显示播放控件
+    autoplay 控制是否自动播放
+    loop 循环播放
+    muted 静音播放
+    poster 加载等待画面图片
+    preload 取值none/auto
+    video 格式 : mp4 ogg WebM  -->
+
+    <video src="vue.mp4" controls width="400" height="400" muted poster="../img/vue.png"></video>
+    <form action="">
+        <p><input type="email"></p>
+        <p><input type="url"></p>
+        <p><input type="time"></p>
+        <p><input type="date"></p>
+        <p><input type="number"></p>
+        <p><input type="tel"></p>
+        <p><input type="color"></p>
+        <p><input type="search"></p>
+        <p><input type="text" required placeholder="请输入用户名" autofocus autocomplete="off"></p>
+        <p><input type="file"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+</body>
+</html>
