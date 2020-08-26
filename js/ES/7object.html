@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="box"></div>
     <script>
         var zs = {
             name:'zs',
@@ -68,16 +69,22 @@
         // }
         // console.log(content);
         // ------------------------------------------------------
-        var arr = params.split('&');
-        console.log(arr);
-        var username = arr[0].split('=')[1];
-        var pwd = arr[1].split('=')[1];
-        console.log(username,pwd);
-        var str = '1,2,3,4';
-        console.log(str);
-        var reverstr = str.split(',').reverse().join();
-        console.log(reverstr);
-        console.log(String.fromCharCode(66));
+        // var arr = params.split('&');
+        // console.log(arr);
+        // var username = arr[0].split('=')[1];
+        // var pwd = arr[1].split('=')[1];
+        // console.log(username,pwd);
+        // var str = '1,2,3,4';
+        // console.log(str);
+        // var reverstr = str.split(',').reverse().join();
+        // console.log(reverstr);
+        // console.log(String.fromCharCode(66));
+        // ----------------------------------------
+        var box = document.getElementById('box');
+        console.log(typeof box);
+        box.index = 1;
+        console.log(box.index);
     </script>
+  
 </body>
 </html>
