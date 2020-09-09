@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="box">
+        <p id="p1">我是p元素</p>
+    </div>
+    <ul>
+        <li class="item"></li>
+        <li></li>
+        <li class="item"></li>
+    </ul>
+    <p>1234</p>
+    <script>
+        var op  = document.getElementById('p1');
+        console.dir(op);
+        var list = document.getElementsByTagName('li')
+        for(var i = 0;i<list.length;i++){
+            list[i].innerHTML = '更改之后的内容';
+
+        }
+        document.getElementsByTagName('p')[0].innerHTML='动态生成';
+        var box = document.getElementById('box');
+        var pele = document.getElementsByTagName('p1');
+        console.log(pele.length);
+        console.log(box.getElementById);
+        var items = document.getElementsByClassName('item');
+        console.log(items);
+        var items1 = document.querySelectorAll('div#box');
+        items1[0].style.background = 'red';
+        console.log(document.body);
+        console.log(document.html);
+        console.log(document.documentElement);
+    </script>
+</body>
+</html>

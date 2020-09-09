@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 290px;
+            height: 290px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        box.onclick = function(e){
+            e = e || window.event;//兼容写法
+            console.log(e);
+        }
+    </script>
+    <script>
+        var x = 10;
+        function fn(){
+            var x ;
+            x = x;
+            console.log(x);
+        }
+        fn()
+    </script>
+</body>
+</html>

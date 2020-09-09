@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <script>
+        var btn1 = document.querySelectorAll('button')[0];
+        var btn2 = document.querySelectorAll('button')[1];
+        var btn3 = document.querySelectorAll('button')[2];
+        function fn1(){
+            alert(1);
+        }
+        function fn2(params) {
+            alert(2);
+        }
+        btn1.addEventListener('click',fn1)
+        btn2.addEventListener('click',fn2);
+        btn1.removeEventListener('click',fn1)
+        btn2.removeEventListener('click',fn2)
+        //ie678   attachEvent()
+        // btn1.attachEvent('onclick',function (params) {   
+        // })
+        // btn1.detachEvent(function name(params) {            
+        // })
+        // 事件监听兼容性解决
+        function addEventListener(ele,eventName,fn) {
+            if (ele.addEventListener) {
+                ele.addEventListener(eventName,fn)
+            } else if (ele.attachEvent) {
+                ele.attachEvent('on' + eventName,fn)
+            } else{
+                ele['on' + eventName] = fn;
+            }
+            
+        }
+        addEventListener(btn3,'mouseover',function () {
+            alert('ok')
+        })
+
+    </script>
+</body>
+</html>

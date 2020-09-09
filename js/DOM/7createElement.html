@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+    <button>发布</button>
+    <script>
+        var btn = document.querySelector('button');
+        var oul = document.querySelector('ul');
+        var i= 1;
+        //绑定事件
+        btn.onclick = function () {
+            var oli = document.createElement('li');
+            oli.innerHTML = '我是动态盛恒的'
+            i++;
+            //添加元素
+            // oul.appendChild(oli);
+            oul.insertBefore (oli,oul.children[0]);
+
+        }
+        // window.onload = function (params) {
+        //     document.write('<h1>东岱h1</h1>')
+        // }
+        var start = +new Date();
+        // for(var i = 0;i<10;i++){
+        //     oul.innerHTML += '<li>动态生成</li>'
+        // }
+        // var end  = +new Date();
+    var arr = []
+    for(var i = 0;i<5;i++){
+        var oli = document.createElement('li');
+        oli.innerHTML = '动态秤秤';
+        oul.appendChild(oli);
+
+    }
+    var end = +new Date();
+    console.log(end -start);
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: chartreuse;
+        }
+        .demo {
+            width: 100px;
+            height: 120px;
+            border: 5px solid chartreuse;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="box">div内容</div>
+    <p>p标签内容</p>
+    <button>样式设置</button><br>
+    <br>
+    <a href="http://www.baidu.com">链接</a>
+    <button>去新浪</button>
+    <button>去网易</button><br>
+    <input type="text" id="txt">
+    <input type="checkbox" id="cbox">
+    <button>操作表单</button>
+    <script>
+        // 获取div
+        var box = document.querySelector('.box');
+        console.log(box.style);
+        // 操作设置行内样式
+        box.style['width'] ='200px';
+        box.style.height = '200px';
+        box.style.backgroundColor = 'red';
+        alert(box.style.height);
+        //获取p元素
+        var pe = document.querySelector('p');
+        var bt = document.querySelector('button');
+        console.log(bt);
+        bt.onclick = function() {
+            pe.className += 'demo';
+        }
+        // --------前后btn的事件绑定有冲突，需要分开执行
+        // var btn  = document.querySelectorAll('button');
+        // var alink  = document.getElementsByTagName('a')[0];
+        // var txt = document.getElementById('txt');
+        // var cbox = document.getElementById('cbox');
+        // // 给按钮绑定一个单击事件按
+        // btn[0].onclick = function(){
+        //     alink.href = 'http://www.sina.com.cn';
+
+        // }
+        // btn[1].onclick = function(){
+        //     alink.href = 'http://www.163.com';
+        // }
+        // btn[2].onclick = function(){
+        //     // 获取文本框的值
+        //     alert(txt.value);
+        //     // alert(cbox.checked);
+        //     cbox.checked = true;
+        //     cbox.disabled = true;
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .nav >li {
+            float: left;
+        }
+        .nav ul {
+            display: none;
+        }
+        div>p {
+            padding-left: 30px;
+            display: inline-block;
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <ul class="nav">
+        <li class="one">
+            一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li class="one">
+            一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+    </ul>
+    <div>
+        <p id="pobj">我是一个<span>自然段</span></p>
+    </div>
+    <script>
+        var op = document.getElementById('pobj');
+        console.log(op.innerHTML);
+        console.log(op.innerText);
+        op.innerText = '我是动态生成的内容';
+        // 单击按钮 弹出对话框
+        // 1 获取按钮元素
+        var btn = document.getElementById('btn');
+        // 2 给按钮注册事件
+        btn.onclick = function(){
+            alert('爱学习，实现财富自由');
+        }
+        var ones = document.querySelectorAll('.one');
+        for(var i = 0; i<ones.length;i++){
+            ones[i].onmouseover = function(){
+                console.log(this);
+                // this 是当前事件
+                var submenu = this.getElementsByTagName('ul')[0];
+                submenu.style.display = 'block';
+                // console.log(submenu);
+            }
+            // 鼠标离开
+            ones[i].onmouseout = function(){
+                var submenu = this.getElementsByTagName('ul')[0];
+                submenu.style.display = 'none';
+                // console.log(submenu);
+            }
+        }
+    </script>
+</body>
+</html>

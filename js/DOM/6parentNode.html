@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>p标签</p>
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <div class="box">div之中的内容</div>
+    <script>
+        var box = document.querySelector('.box');
+        console.log(box.parentNode.children[1]);
+        console.log(box.nextSibling.nextSibling);
+        console.log(box.previousSibling);
+        console.log(box.previousElementSibling);
+        function getNextElementSibling(ele){
+            var e = ele;
+            while (e = e.nextSibling) {
+                if (e.nodeType === 1) {
+                    return e;
+                }
+            }
+            return null;
+        }
+        console.log(getNextElementSibling(box));
+        // var oul = document.querySelector('ul');
+        // var lis = oul.childNodes;
+        // console.log(lis.length);
+        // console.log(lis[3].nodeType);//元素节点
+        // for(var i = 0;i<lis.length;i++){
+        //     if(lis[i].nodeType === 1){
+        //         lis[i].style.border = '1px solid red';
+        //     }
+        // }
+        // //children 属性 得到元素的所有元素的子节点
+        // console.log(oul.children.length);
+        // var op = document.querySelector('p');
+        // console.log(op.parentNode);
+        // var oh = document.documentElement;
+        // console.log(oh.parentNode);
+        // console.log(document.parentNode);
+    </script>
+</body>
+</html>

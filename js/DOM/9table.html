@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            /* height: 200px; */
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td,th {
+            border: 1px solid red;
+        }
+        thead tr {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var students = [{
+            studentname:'1好',
+            id:'001',
+            core:'90'
+        },{
+            studentname:'1好',
+            id:'001',
+            core:'90'        
+        },{
+            studentname:'1好',
+            id:'001',
+            core:'90'
+
+        }];
+        //数据迭代
+        var student;
+        var str;
+        var allStr = '';
+        for(var i = 0;i<students.length;i++){
+            student = students[i];
+            str = '<tr>';
+            for(var key in student){
+                str += '<td>'+student[key] + '</td>';
+            }
+            str += '<td><a href = "javascript:;"> 删除 </a></td>'
+            str += '</tr>'
+            allStr += str;
+        }
+        var tbody = document.querySelector('tbody');
+        tbody.innerHTML =  allStr;
+        // 获取所有的a
+        var as = document.querySelectorAll('a');
+        for(var i = 0; i<as.length;i++){
+            as[i].onclick = function(){
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>删除留恋</button>
+    <button>克隆留恋</button>
+    <ul>
+        <li>留言1</li>
+        <li>留言2</li>
+        <li>留言3</li>
+    </ul>
+    <script>
+        var btn = document.querySelectorAll('button')[0];
+        var ul = document.querySelector('ul');
+        // var cloneul1 = document.getElementsByTagName('ul')[0];
+        // var firstCopy = cloneul1.children[0].cloneNode(true);
+        // ul.appendChild(firstCopy);
+        // console.log(ul);
+        //绑定事件
+        var cloneul = document.querySelectorAll('button')[1];
+        cloneul.onclick = function(){
+            var cloneul1 = document.getElementsByTagName('ul')[0];
+            var firstCopy = cloneul1.children[1].cloneNode(true);
+            console.log(firstCopy);
+            console.log(ul);
+            ul.appendChild(firstCopy);        
+        }
+        btn.onclick = function(){
+            if(ul.children.length >0){
+                //删除第一个孩子
+                var ele = ul.removeChild(ul.children[0]);
+                console.log(ele);
+            }else {
+                btn.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
