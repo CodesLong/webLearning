@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 1s;
+        }
+        .box:hover {
+            width: 300px;
+            height: 300px;            
+        }
+        .progress {
+            width: 150px;
+            height: 15px;
+            border: 1px solid red;
+            border-radius: 7px;margin: 100px auto; 
+        }
+        .progress .bar {
+            height: 100%;
+            width: 50%;
+            background-color: blue;
+            transition: all 1s;
+        }
+        .progress:hover .bar {
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+</body>
+</html>

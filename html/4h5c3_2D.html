@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: translateX(100px);
+            transform: translateY(50%);
+        }
+        img {
+            border-radius: 50%;
+            transition: all 0.5s;
+            transform:rotate(180deg) ;
+        }
+        .box3:hover img {
+            transform: rotate(0deg);
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            overflow: hidden;
+        }
+        .p1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition: all 2s;
+            transform-origin: left top;
+        }
+        p:hover {
+            transform: scale(1.5,1);
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">
+        <img src="../img/girl.webp" width="130px" alt="">
+    </div>
+    <p class="p1"></p>
+</body>
+</html>

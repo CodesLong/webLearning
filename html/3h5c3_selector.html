@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[disabled]{
+            background-color: red;
+        }
+        input[id="ip1"]{
+            font-size-adjust: 30px;
+        }
+        /* ^= 以。。开头 */
+        div[id^= "box"]{
+            height: 100px;
+            width: 100px;
+            border: 2px solid skyblue;
+            margin: 10px;
+        }
+        /* $= 以。。结尾 */
+        [id$="1"]{
+            font-size: 30px;
+        }
+        /* *= 包含 */
+        [class*="p"]{
+            text-decoration: underline;
+        }
+        /* 结构伪类选择器 */
+        ul li:first-child {
+            background-color: skyblue;
+        }
+        ul li:last-child {
+            background-color: skyblue;
+        }
+        ul li:nth-child(3) {
+            font-weight: 700;
+            font-size: 50px;
+        }
+        ul li:nth-last-child(2){
+            color: yellow;
+        }
+        div p:nth-child(2) {
+            height: 100px;
+            background-color: turquoise;
+        }
+        /* 指定类型中的第几个 */
+        div span:first-of-type{
+            color:red;
+            font-size: large;
+        }
+        div span:last-of-type{
+            color:blue;
+        }
+        /* --------------------------------- */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        /* 创建元素属于行内元素，创建出来的元素在dom中查找
+        不到，其权重同标签选择器 */
+        .box::before{
+            content: '我在最前面';
+            width: 80px;
+            height: 80px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+        .box::after{
+            content: '我在最后面';
+            width: 80px;
+            height: 80px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        div
+    </div>
+    <div>
+        <div>div 内容</div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <p>p内容</p>        
+    </div>
+    <input type="text" name="" id="ip1">
+    <input type="text" name="" id="ip2" disabled/>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box"></div>
+    <p id="p1">自然段</p>
+    <p class="p1">自然段</p>
+    <span class="sp">span</span>
+    <div>
+        <div></div>
+        <p>nicaicia</p>
+        <p>zheshisha </p>
+    </div>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+    <ol>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ol>
+</body>
+</html>
