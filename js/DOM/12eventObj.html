@@ -14,7 +14,19 @@
 </head>
 <body>
     <div class="box"></div>
+    <a href="www.baidu.com">百度一下</a>
     <script>
+        var alink =  document.querySelector('a');
+        //超链接默认行为  会跳转
+        alink.addEventListener('click' ,function(e){
+            e.preventDefault();//普通浏览器阻止默认行为
+            alert('你好');
+        });
+        alink.onclick = function(e){
+            alert('nihao');
+            return false;//也可以组织默认行为，每有兼容性 只能绑定在dom0级事件
+            
+        }
         var box = document.querySelector('.box');
         box.onclick = function(e){
             e = e || window.event;//兼容写法

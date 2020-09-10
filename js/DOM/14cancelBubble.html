@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fa {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .son {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="fa">
+        <div class="son"></div>
+    </div>
+    <ul>
+        <li>本来存在的li 1</li>
+        <li>本来存在的li 2</li>
+    </ul>
+    <button>添加li</button>
+    <script>
+        var fa = document.querySelector('.fa');
+        var son = document.querySelector('.son');
+        son.addEventListener('click',function(e){
+            console.log('son');
+            e.stopPropagation();//阻止事件冒泡  dom推荐的标准
+            // e.cancelBubble = true; //非标准
+        });
+        fa.addEventListener('click',function(e){
+            console.log('fa');
+        });
+        document.addEventListener('click',function(){
+            console.log('document');
+        });
+        // 给ul下的所有li绑定单击事件
+        var lis = document.querySelectorAll('li');
+        for(var i = 0;i<lis.length;i++){
+            lis[i].onclick = function(e){
+                console.log(e.target.innerHTML);
+                e.stopPropagation();
+            }
+        }
+        // var btn = document.querySelector('button');
+        // btn.onclick = function(){
+        //     document.getElementsByTagName('ul')[0].innerHTML += '<li>我是动态生成的 </li>' ;
+        // }
+        document.getElementsByTagName('ul')[0].addEventListener('click',function(e){
+            console.log(e.target.innerHTML);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1">我是p标签</p>
+    <ol>
+        <li>中国</li>
+        <li>韩国</li>
+        <li>美国</li>
+    </ol>
+    <script>
+        //target 属性返回的触发事件的对象
+        //this 返回哪个元素绑定的事件
+        var p1 = document.querySelector('.p1');
+        var ol = document.querySelector('ol');
+        p1.addEventListener('click',function(e){
+            e = e || event;
+            var target = e.target || e.srcElement;
+            console.log(e.target);
+            console.log(this);
+        });
+        ol.addEventListener('click',function(e){
+            console.log(this);
+            console.log(e.currentTarget);//了解e.currentTarget === this
+            console.log(e.target);
+        })
+    </script>
+</body>
+</html>
