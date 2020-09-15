@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 父盒子设置为flex布局  子元素的float 
+            clear vertical-align 失效 */
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: aqua;
+            /* flex布局中默认子元素是不换行的
+             假如父元素空间不够 子元素会缩小 */
+             flex-wrap: nowrap;
+             flex-wrap: wrap;
+        }
+        .box div {
+            width: 200px;
+            height: 80px;
+            background-color: green;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+    </div>
+</body>
+</html>
