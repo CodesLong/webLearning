@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+        width: 320px;
+        height: 320px;
+        background-color: aqua;
+        margin: 200px;
+        cursor: move;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        //获取鼠标在盒子内移动的实施坐标
+        var box = document.querySelector('.box');
+        box.addEventListener('mousemove',function(e){
+            var x = e.pageX -this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            this.innerHTML = x + ':' +y;
+            console.log(y);
+            console.log(x);
+        })
+    </script>
+</body>
+</html>

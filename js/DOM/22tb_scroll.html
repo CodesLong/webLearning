@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w1200 {
+            width: 1200px;
+            margin: 10px auto;
+        }
+        .header {
+            height: 160px;
+            background-color: aqua;
+        }
+        .banner {
+            height: 260px;
+            background-color: brown;
+        }
+        .main{
+            height: 1600px;
+            background-color: cornflowerblue;
+        }
+        .slider-bar {
+            position: absolute;
+            background-color: rgb(30, 189, 51);
+            top: 300px;
+            right: 60px;
+            width: 45px;
+            height: 140px;
+        }
+        .slider-bar span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header w1200">header</div>
+    <div class="banner w1200">banner</div>
+    <div class="main w1200">main</div>
+    <div class="slider-bar">
+        <span>返回顶部</span>
+    </div>
+    <script>
+        //获取续相关元素
+        var banner = document.querySelector('.banner');
+        var sliderBar = document.querySelector('.slider-bar');
+        var goBack = sliderBar.children[0];
+        var main = document.querySelector('.main');
+        var bannerTop = banner.offsetTop;
+        var sliderBarTop = sliderBar.offsetTop - bannerTop;
+        var mainTop = main.offsetTop;
+        console.log(bannerTop, sliderBarTop);
+        //页面监听滚动事件
+        document.addEventListener('scroll',function(){
+            console.log(sliderBarTop);
+            if(window.pageYOffset >= bannerTop){
+                sliderBar.style.position = 'fixed';
+                sliderBar.style.top = sliderBarTop + 'px';
+            } else {
+                sliderBar.style.position = 'absolute';
+                sliderBar.style.top = '300px';
+            }
+            window.pageYOffset >= mainTop ? goBack.style.display = 'block': goBack.style.display = 'none';
+        })
+    </script>
+
+</body>
+</html>
