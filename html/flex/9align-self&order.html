@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 80%;
+            height: 300px;
+            display: flex;
+            background-color: skyblue;
+            align-items: flex-end;
+        }
+        .box div {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            margin-right: 6px;
+        }
+        .box div:nth-child(2){
+            height: auto;
+            align-self: flex-start;
+            align-self: end;
+            /* order: -1; */
+        }
+        .box div:nth-child(3){
+            height: auto;
+            align-self: flex-start;
+            align-self: center;
+            /* order: -1; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+    </div>
+</body>
+</html>

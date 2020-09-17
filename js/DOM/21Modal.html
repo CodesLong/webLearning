@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: chartreuse;
+        }
+        .login_header {
+            height: 30px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .login {
+            width: 500px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 9999;
+            display: none;
+            background-color: red;
+        }
+        .login_mark {
+            height: 100%;
+            display: none;
+            width: 100%;
+            position: fixed;
+            background-color:rgba(87, 87, 93, 0.3);
+            left: 0;
+            top: 0;
+        }
+        span {
+            position: absolute;
+            left: 94%;
+            top: -6%;
+            /* z-index: 99999; */
+            color: chartreuse;
+            cursor: pointer;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_header">
+        <a href="javascript:;" id="login_link">登录</a>
+    </div>
+    <div class="login">
+        <span>×</span>
+    </div>
+    <div>main</div>
+    <div class="login_mark">
+
+    </div>
+    <script>
+        var login_link = document.getElementById('login_link')
+        var login = document.querySelector('.login');
+        var login_mark = document.querySelector('.login_mark');
+        var close = document.querySelector('span');
+        close.addEventListener('click',function(){
+            login.style.display = 'none'
+            login_mark.style.display = 'none'
+        })
+        login_link.addEventListener('click',function(){
+            login.style.display = 'block';
+            login_mark.style.display = 'block';
+        });
+        //实现拖拽
+        login.addEventListener('mousedown',function(e){
+            var x = e.pageX - login.offsetLeft;
+            var y = e.pageY - login.offsetTop;
+            function move(e) {
+                login.style.left = e.pageX - x + 'px'
+                login.style.top = e.pageY - y +'px'
+            }
+            document.addEventListener('mousemove',move);
+            console.log(x);
+            document.addEventListener('mouseup',function(){
+                document.removeEventListener('mousemove',move)
+            })
+        })
+    </script>
+</body>
+</html>

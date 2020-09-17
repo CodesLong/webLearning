@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 父盒子设置为flex布局 子元素的float,clear 
+            ,vertical-align 会失效 */
+            display: flex;
+            width: 80%;
+            height: 400px;
+            background-color: red;
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            /* justify-content: flex-start ; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            justify-content: space-between;
+        }
+        .box div {
+            width: 200px;
+            height: 80px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+    </div>
+</body>
+</html>

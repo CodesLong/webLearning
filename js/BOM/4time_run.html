@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h2 ></h2>
+    </div>
+    <script>
+        function getTime(){
+            var now = new Date();
+            var end = new Date('2022/1/1');
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var year = now.getFullYear();
+            var month = now.getMonth();
+            var d = now.getDate();
+            var weekday = arr[now.getDay()];
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            var timerStr = year + '年' + month + '月' + d + '天' + h + ': ' + m + ':' + s +' ' + weekday;
+            document.getElementsByTagName('h2')[0].innerHTML = timerStr;
+
+        }
+        setInterval(getTime(),1000)
+        var h2 = document.getElementsByTagName('h2')[0];
+        var endTime = new Date('2020-10-1');
+        function getTime2() {
+            var now = new Date();
+            var diff = endTime.getTime() - now.getTime();
+            diff = parseInt(diff/1000);
+            var leaveD = parseInt(diff/(24*60*60));
+            var leaveH = parseInt(diff%(24*3600)/3600)
+            var leaveM = parseInt(diff%(60*60)/60);
+            var leaveS = diff % 60;
+            h2.innerHTML = '距离2020年10月1日还剩'+leaveD+'天' + leaveH+'时' + leaveM +'分' + leaveS + '秒';
+
+        }
+        // getTime()
+        // getTime2()
+    </script>
+</body>
+</html>

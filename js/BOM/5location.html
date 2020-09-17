@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        你将会在<span>5</span>秒后跳转到百度
+    </div>
+    <script>
+        console.log(location);
+        var oSpan = document.querySelector('span')
+        var num = 5;
+        setInterval(function(){
+            num--;
+            if(num ===0){
+                location.href  = 'http://www.baidu.com'
+                // location.reload(true);
+            } else{
+                oSpan.innerText = num;
+            }
+        },1000);
+    </script>
+</body>
+</html>
