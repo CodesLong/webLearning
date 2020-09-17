@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="./7history.html">去第七个文件</a>
+    <button>后退</button>
     <script>
-        console.dir(window.document === document)
-        alert()
-        var a = 10;
-        console.log(a === window.a);
-        function fn(params) {
-            
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            history.back();
         }
-        console.log(window.fn === fn);
     </script>
 </body>
 </html>

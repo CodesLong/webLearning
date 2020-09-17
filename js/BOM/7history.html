@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="./8test.html">去第六个文件</a>
+    <button>前进</button>
     <script>
-        console.dir(window.document === document)
-        alert()
-        var a = 10;
-        console.log(a === window.a);
-        function fn(params) {
-            
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            history.forward();
+            // history.go(1)
         }
-        console.log(window.fn === fn);
     </script>
 </body>
 </html>

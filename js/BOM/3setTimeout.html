@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            color: purple;
+            background-color: skyblue;
+        }
+        button:hover {
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <button>开始炸弹</button>
+    <button>结束炸弹</button>
+    <img src="../../img/window.png" alt="" class="ad">
+    <button id="btn">停止按钮</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        var timer2 = null;
+        btns[0].addEventListener('click',function(){
+            //每个一段时间执行一侧代码逻辑
+            timer2 = setInterval(function(){
+                console.log('定时炸弹+1');
+            },1000)
+        })
+        btns[1].addEventListener('click',function(){
+            clearTimeout(timer2)
+        })
+        // ------------------------------------
+        console.log(window);
+        function fn(a){
+            console.log(a);
+            console.log('hello world');
+        }
+        var timer = setTimeout(fn('zcl'),3000);
+        //5s 后关闭广告
+        var ad = document.querySelector('.ad');
+        // console.log(ad);
+        var timer1 = setTimeout(function(){
+            ad.style.display = 'none';
+        },3000);
+        var btn = document.querySelector('#btn');
+        btn.addEventListener('click',function(){
+            clearTimeout(timer1)
+        })
+    </script>
+</body>
+</html>
